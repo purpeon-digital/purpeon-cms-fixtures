@@ -17,7 +17,7 @@ sections:
   - type: newsletter_signup
     headline: Stay posted
 seo:
-  title: Pricing
+  title: Pricing that makes sense
   description: Simple, honest pricing.
 layout: default
 ---
