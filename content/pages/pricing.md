@@ -5,8 +5,8 @@ legacy_id: 4711
 featured: true
 sections:
   - type: hero
-    heading: Power your home
-    body: Cut your bill by _up to 30%_.
+    heading: Power your whole home
+    body: This is a test
   - type: feature_grid
     columns: 3
     items:
@@ -17,8 +17,8 @@ sections:
   - type: newsletter_signup
     headline: Stay posted
 seo:
-  title: Pricing
-  description: Simple, honest pricing.
+  title: Pricing that makes sense
+  description: Simple, honest pricing with no surprises.
 layout: default
 ---
 
