@@ -5,7 +5,7 @@ legacy_id: 4711
 featured: true
 sections:
   - type: hero
-    heading: Power your home
+    heading: Power your whole home
     body: Cut your bill by _up to 30%_.
   - type: feature_grid
     columns: 3
