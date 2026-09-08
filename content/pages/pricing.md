@@ -18,7 +18,7 @@ sections:
     headline: Stay posted
 seo:
   title: Pricing that makes sense
-  description: Simple, honest pricing.
+  description: Simple, honest pricing with no surprises.
 layout: default
 ---
 
