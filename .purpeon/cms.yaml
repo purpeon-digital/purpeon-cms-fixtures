@@ -1,0 +1,80 @@
+version: 1
+
+site:
+  name: Purpeon CMS Fixtures
+  timezone: Europe/Oslo
+  branch: main
+  publish_mode: pr
+
+media:
+  folder: public/uploads
+  public_path: /uploads
+  max_size_kb: 4096
+  accept: [image/jpeg, image/png, image/webp, image/svg+xml]
+  transform:
+    strip_exif: true
+    max_dimension: 2400
+
+preview:
+  mode: deploy_preview
+
+collections:
+  - name: pages
+    type: folder
+    label: Pages
+    label_singular: Page
+    folder: content/pages
+    format: frontmatter-md
+    body_field: body
+    create: true
+    delete: true
+    slug:
+      template: "{{fields.title | slugify}}"
+    preview:
+      permalink: "/{{slug}}"
+    list:
+      summary: "{{fields.title}}"
+      columns: [title, status, commit.updated_at]
+      sortable_fields: [title, commit.updated_at]
+      default_sort:
+        field: commit.updated_at
+        order: desc
+      filters:
+        - name: status
+          label: Status
+          field: status
+    fields:
+      - name: title
+        type: string
+        required: true
+        validate:
+          - rule: max_length
+            value: 70
+      - name: status
+        type: select
+        default: draft
+        options: [draft, published]
+      - name: hero
+        type: image
+        fields:
+          alt: required
+          dimensions: true
+      - name: body
+        type: markdown
+        label: Body
+      - name: layout
+        type: hidden
+        value: default
+
+  - name: settings
+    type: file
+    label: Settings
+    files:
+      - name: navigation
+        label: Navigation
+        file: content/settings/navigation.yaml
+        format: yaml
+        fields:
+          - name: heading
+            type: string
+            required: true
