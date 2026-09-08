@@ -59,6 +59,64 @@ collections:
         fields:
           alt: required
           dimensions: true
+      - name: featured
+        type: boolean
+        label: Featured on the front page
+      - name: publish_at
+        type: datetime
+        label: Publish at
+        storage: iso_offset
+        timezone: site
+      - name: sections
+        type: list
+        label: Page sections
+        label_singular: Section
+        type_key: type
+        max: 30
+        summary: "{{item.heading | default:'(untitled section)'}}"
+        types:
+          - name: hero
+            label: Hero
+            fields:
+              - name: heading
+                type: string
+                required: true
+              - name: body
+                type: markdown
+          - name: feature_grid
+            label: Feature grid
+            fields:
+              - name: columns
+                type: number
+                value_type: int
+                default: 3
+                min: 2
+                max: 4
+              - name: items
+                type: list
+                label: Features
+                label_singular: Feature
+                min: 1
+                max: 12
+                summary: "{{item.title}}"
+                fields:
+                  - name: title
+                    type: string
+                    required: true
+                  - name: text
+                    type: text
+      - name: seo
+        type: object
+        label: Search and sharing
+        collapsed: true
+        fields:
+          - name: title
+            type: string
+            validate:
+              - rule: max_length
+                value: 60
+          - name: description
+            type: text
       - name: body
         type: markdown
         label: Body
