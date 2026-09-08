@@ -6,7 +6,7 @@ featured: true
 sections:
   - type: hero
     heading: Power your whole home
-    body: Cut your bill by _up to 30%_.
+    body: This is a test
   - type: feature_grid
     columns: 3
     items:
