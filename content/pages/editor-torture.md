@@ -8,7 +8,7 @@ seo:
   description: ""
 ---
 
-- written with asterisk bullets today today
+- written with asterisk bullets today today PROD2
 - which our serializer rewrites to dashes
 
 Some *underscore emphasis* and **bold with *italic* inside**, plus `inline code`.
