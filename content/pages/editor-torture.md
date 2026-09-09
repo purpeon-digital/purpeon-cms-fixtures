@@ -2,12 +2,16 @@
 title: Editor torture page
 status: draft
 layout: default
+featured: false
+seo:
+  title: ""
+  description: ""
 ---
 
-* written with asterisk bullets
-* which our serializer rewrites to dashes
+- written with asterisk bullets today today
+- which our serializer rewrites to dashes
 
-Some _underscore emphasis_ and **bold with *italic* inside**, plus `inline code`.
+Some *underscore emphasis* and **bold with *italic* inside**, plus `inline code`.
 
 | Feature | Included |
 | :------ | -------: |
