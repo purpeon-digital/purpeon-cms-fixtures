@@ -5,5 +5,3 @@ layout: default
 ---
 
 We build websites.
-
-Verified in production at 2026-09-08 21:43.
