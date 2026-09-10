@@ -10,7 +10,7 @@ media:
   folder: public/uploads
   public_path: /uploads
   max_size_kb: 4096
-  accept: [image/jpeg, image/png, image/webp, image/svg+xml]
+  accept: [image/jpeg, image/png, image/webp, image/svg+xml, application/pdf]
   transform:
     strip_exif: true
     max_dimension: 2400
@@ -117,6 +117,14 @@ collections:
                 value: 60
           - name: description
             type: text
+      - name: related
+        type: relation
+        label: Related page
+        collection: pages
+      - name: brochure
+        type: file
+        label: Brochure
+        accept: [application/pdf]
       - name: cta
         type: link
         label: Call to action
