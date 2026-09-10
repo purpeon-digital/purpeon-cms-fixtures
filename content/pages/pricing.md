@@ -20,6 +20,10 @@ seo:
   title: Pricing that makes sense
   description: Simple, honest pricing with no surprises.
 layout: default
+related: about-us
+brochure:
+  src: /uploads/price-list-6d1aae20.pdf
+  path: public/uploads/price-list-6d1aae20.pdf
 ---
 
 Our pricing is simple.
